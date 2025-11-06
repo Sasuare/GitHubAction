@@ -1,23 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página en GitHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio — Tu Nombre</title>
+  <meta name="description" content="Portafolio profesional de SANTIAGO SUAREZ— proyectos, habilidades y contacto">
+  <!-- Simple styles included for a single-file portfolio -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      color: #333;
-    }
+    :root{--accent:#0ea5a4;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071021 0%, #071628 100%); color:#e6eef6; line-height:1.5}
+    header{padding:28px 20px; display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;background:var(--accent);display:inline-grid;place-items:center;border-radius:8px;font-weight:700;color:#042226}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{padding:40px 20px;max-width:1000px;margin:0 auto}
+    .hero h1{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.4rem)}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .actions{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#062424}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+    .card{background:rgba(255,255,255,0.03);padding:16px;border-radius:12px}
+    .card h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    footer{padding:28px 20px;text-align:center;color:var(--muted);font-size:.9rem}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)}
+    /* responsive spacing */
+    @media(min-width:900px){header{padding:36px 40px}.hero{padding:64px 40px}}
   </style>
 </head>
 <body>
-  <h1>¡Hola desde GitHub Pages!</h1>
-  <p>Mi primera página publicada 🚀</p>
+  <header>
+    <div class="brand">
+      <div class="logo">TD</div>
+      <div>
+        <div style="font-weight:700">Tu Nombre</div>
+        <div class="muted" style="font-size:.85rem">Product Owner • AI • Cloud</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">Sobre mí</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>Hola — soy SANTIAGO SUAREZ </h1>
+    <p class="muted">Product Owner especializado en datos y soluciones de inteligencia artificial. Aquí encuentras algunos proyectos, links y formas de contacto.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+      <a class="btn btn-ghost" href="#contact">Descargar CV</a>
+    </div>
+
+    <section id="about" style="margin-top:28px">
+      <div class="card">
+        <h2>Sobre mí</h2>
+        <p class="muted">Soy especialista en dirigir productos tecnológicos con foco en machine learning, cloud y análisis de datos. Me interesa crear soluciones prácticas que generen impacto y reduzcan fricción para usuarios y equipos técnicos.</p>
+        <div style="margin-top:12px">
+          <div class="muted" style="font-size:.9rem">Habilidades</div>
+          <div class="skills" style="margin-top:8px">
+            <span class="skill">Product Management</span>
+            <span class="skill">Azure</span>
+            <span class="skill">Data Modeling</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">SQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top:22px">
+      <h2 style="margin:0 0 12px">Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Nombre del proyecto 1</h3>
+          <p class="muted">Breve descripción del proyecto, tecnologías usadas y rol que desempeñaste.</p>
+          <p style="margin-top:12px"><a href="#" style="text-decoration:none;color:var(--accent)">Ver demo</a> • <a href="#" style="text-decoration:none;color:var(--muted)">Código</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Nombre del proyecto 2</h3>
+          <p class="muted">Breve descripción del proyecto, impacto y métricas relevantes.</p>
+          <p style="margin-top:12px"><a href="#" style="text-decoration:none;color:var(--accent)">Ver demo</a> • <a href="#" style="text-decoration:none;color:var(--muted)">Código</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Nombre del proyecto 3</h3>
+          <p class="muted">Breve descripción. Perfecto para mostrar arquitectura, pipeline o dashboard.</p>
+          <p style="margin-top:12px"><a href="#" style="text-decoration:none;color:var(--accent)">Ver demo</a> • <a href="#" style="text-decoration:none;color:var(--muted)">Código</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p class="muted">¿Te interesa colaborar o tienes una oportunidad? Escríbeme a <a href="mailto:tucorreo@example.com" style="color:var(--accent)">tucorreo@example.com</a></p>
+        <p class="muted" style="margin-top:8px">También puedes encontrarme en: <a href="#" style="color:var(--accent)">GitHub</a> • <a href="#" style="color:var(--accent)">LinkedIn</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>Made with care • © <span id="year"></span> Tu Nombre</div>
+  </footer>
+
+  <script>
+    // Update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Small helper: if user clicks "Descargar CV" we could link a real file
+  </script>
 </body>
 </html>
